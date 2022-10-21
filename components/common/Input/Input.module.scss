@@ -1,0 +1,41 @@
+@import "../../../styles/main.module.scss";
+
+.inputContainer {
+  color: $neutral-60;
+  display: flex;
+  flex-direction: column;
+
+  .outline {
+    display: flex;
+    align-items: center;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+    border: 1px solid $neutral-60;
+    border-radius: 4px;
+  }
+
+  .input {
+    outline: none;
+    border: none;
+    min-width: 245px;
+    padding-left: 8px;
+    width: 100%;
+
+    &::placeholder {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $neutral-60;
+    }
+  }
+
+  .hint .label {
+    font-size: 12.8px;
+    line-height: 20px;
+    color: $neutral-60;
+  }
+}
