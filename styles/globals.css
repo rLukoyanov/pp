@@ -57,20 +57,3 @@ body {
   color: #000000;
 }
 
-.body-sm {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12.8px;
-  line-height: 20px;
-  color: #000000;
-}
-
-.body-xs {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 16px;
-  color: #000000;
-}

@@ -34,13 +34,61 @@ $critical-50: #e65c71;
 $critical-10: #ffccd4;
 
 // *success
-$success-80: #26802A;
-$success-60: #3DCC43;
-$success-50: #45E64B;
-$success-10: #CCFFCE;
+$success-80: #26802a;
+$success-60: #3dcc43;
+$success-50: #45e64b;
+$success-10: #ccffce;
 
 // *info
-$info-80: #1F5A66;
-$info-60: #2E8799;
-$info-50: #3DB4CC;
-$info-10: #CCF7FF;
+$info-80: #1f5a66;
+$info-60: #2e8799;
+$info-50: #3db4cc;
+$info-10: #ccf7ff;
+
+.block {
+  width: 50px;
+  height: 50px;
+}
+
+.bodySm {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.bodyXs {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.elevetion2 {
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 1px rgba(0, 14, 51, 0.2);
+}
+
+.elevetion4 {
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 1px rgba(0, 14, 51, 0.2);
+}
+
+.elevetion8 {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px 2px rgba(0, 14, 51, 0.2);
+}
+
+.elevetion16 {
+  background: #ffffff;
+  box-shadow: 0px 0px 16px 3px rgba(0, 14, 51, 0.2);
+}
+
+.elevetion24 {
+  background: #ffffff;
+  box-shadow: 0px 0px 24px 4px rgba(0, 14, 51, 0.2);
+}
