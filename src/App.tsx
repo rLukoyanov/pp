@@ -22,6 +22,8 @@ function App() {
       <div className={`${styles.block} ${styles.elevetion16}`}></div>
       <div className={`${styles.block} ${styles.elevetion24}`}></div>
       <Input />
+      <Input />
+      <Input />
     </div>
   );
 }

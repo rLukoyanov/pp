@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
 
-    padding: 12px 15px;
+    padding: 0 15px;
 
     background: #ffffff;
     border: 1px solid $neutral-60;
@@ -21,6 +21,9 @@
     border: none;
     min-width: 245px;
     padding-left: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 24px;
     width: 100%;
 
     &::placeholder {
@@ -37,5 +40,9 @@
     font-size: 12.8px;
     line-height: 20px;
     color: $neutral-60;
+  }
+
+  .focused {
+    border-color: $primary-50;
   }
 }
