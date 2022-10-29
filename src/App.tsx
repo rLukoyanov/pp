@@ -24,6 +24,7 @@ function App() {
       <Input status="default" />
       <Input status="error" />
       <Input status="success" />
+      <Input status="success" disabled />
     </div>
   );
 }

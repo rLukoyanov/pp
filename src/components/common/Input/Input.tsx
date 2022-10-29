@@ -5,7 +5,7 @@ import InputDownArrow from "../../../images/input/inputDownArrow.svg";
 
 import styles from "./Input.module.scss";
 
-export default function Input({ status = "default" }) {
+export default function Input({ status = "default", disabled = false }) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
   const onBlur = () => setFocused(false);
@@ -22,7 +22,9 @@ export default function Input({ status = "default" }) {
       changeStyles = styles.success;
       break;
   }
-
+  if (disabled === true) {
+    changeStyles = styles.disabled;
+  }
   return (
     <div className={styles.inputContainer}>
       <div className={styles.label}>label</div>
@@ -40,6 +42,7 @@ export default function Input({ status = "default" }) {
           className={styles.input}
           placeholder="placeholder"
           type="text"
+          disabled={disabled}
         />
         <img alt="inputDownArrow" src={InputDownArrow} />
       </div>

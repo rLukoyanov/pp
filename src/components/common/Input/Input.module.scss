@@ -57,4 +57,10 @@
     transition: 1s;
     border-color: $success-50;
   }
+
+  .disabled {
+    transition: 1s;
+    border-color: $neutral-60;
+    background-color: $neutral-10;
+  }
 }
