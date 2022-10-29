@@ -6,6 +6,7 @@
   flex-direction: column;
 
   .outline {
+    transition: 1s;
     display: flex;
     align-items: center;
 
@@ -43,6 +44,17 @@
   }
 
   .focused {
+    transition: 1s;
     border-color: $primary-50;
+  }
+
+  .error {
+    transition: 1s;
+    border-color: $critical-50;
+  }
+
+  .success {
+    transition: 1s;
+    border-color: $success-50;
   }
 }
