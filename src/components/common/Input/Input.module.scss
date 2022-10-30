@@ -21,11 +21,14 @@
     outline: none;
     border: none;
     min-width: 245px;
-    padding-left: 8px;
     padding-top: 12px;
     padding-bottom: 12px;
     height: 24px;
     width: 100%;
+
+    .left {
+      padding-left: 8px;
+    }
 
     &::placeholder {
       font-family: "Inter";

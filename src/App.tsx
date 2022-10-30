@@ -22,6 +22,10 @@ function App() {
       <div className={`${styles.block} ${styles.elevetion16}`}></div>
       <div className={`${styles.block} ${styles.elevetion24}`}></div>
       <Input status="default" />
+      <Input status="default" leftIcon/>
+      <Input status="default" leftIcon/>
+      <Input status="default" />
+      <Input status="default" />
       <Input status="error" />
       <Input status="success" />
       <Input status="success" disabled />
