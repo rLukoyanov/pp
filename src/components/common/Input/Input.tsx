@@ -9,6 +9,7 @@ export default function Input({
   status = "default",
   disabled = false,
   leftIcon = false,
+  rightIcon = false,
 }) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
@@ -32,7 +33,10 @@ export default function Input({
   }
 
   if (leftIcon === true) {
-    inputStyles = `${styles.input} ${styles.left}`;
+    inputStyles = inputStyles + " " + styles.left;
+  }
+  if (rightIcon === true) {
+    inputStyles = inputStyles + " " + styles.right;
   }
 
   return (
@@ -54,7 +58,7 @@ export default function Input({
           type="text"
           disabled={disabled}
         />
-        <img alt="inputDownArrow" src={InputDownArrow} />
+        {rightIcon ? <img alt="inputDownArrow" src={InputDownArrow} /> : <></>}
       </div>
       <div className={styles.hint}>hint text</div>
     </div>
