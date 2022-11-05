@@ -2,6 +2,7 @@ import React from "react";
 import Input from "./components/common/Input/Input";
 
 import styles from "./App.module.scss";
+import TextArea from "./components/common/TextArea/TextArea";
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
       <Input status="error" />
       <Input status="success" />
       <Input status="success" disabled />
+      <TextArea />
+      <TextArea status="default" />
+      <TextArea status="error" />
+      <TextArea status="success" />
+      <TextArea disabled />
     </div>
   );
 }
