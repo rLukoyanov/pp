@@ -1,0 +1,69 @@
+@import "../../../App.module.scss";
+
+.inputContainer {
+  color: $neutral-60;
+  display: flex;
+  flex-direction: column;
+
+  .outline {
+    transition: 1s;
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+    border: 1px solid $neutral-60;
+    border-radius: 4px;
+  }
+
+  .input {
+    outline: none;
+    border: none;
+    min-width: 245px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 24px;
+    width: 100%;
+
+    .left {
+      padding-left: 8px;
+    }
+
+    &::placeholder {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $neutral-60;
+    }
+  }
+
+  .hint .label {
+    font-size: 12.8px;
+    line-height: 20px;
+    color: $neutral-60;
+  }
+
+  .focused {
+    transition: 1s;
+    border-color: $primary-50;
+  }
+
+  .error {
+    transition: 1s;
+    border-color: $critical-50;
+  }
+
+  .success {
+    transition: 1s;
+    border-color: $success-50;
+  }
+
+  .disabled {
+    transition: 1s;
+    border-color: $neutral-60;
+    background-color: $neutral-10;
+  }
+}
