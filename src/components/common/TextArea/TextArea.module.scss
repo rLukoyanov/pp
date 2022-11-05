@@ -1,0 +1,68 @@
+@import "../../../App.module.scss";
+
+.outline {
+  transition: 1s;
+  display: flex;
+  align-items: center;
+
+  padding: 0 15px;
+}
+
+.textarea {
+  outline: none;
+  border: none;
+  min-width: 392px;
+  width: 500px;
+  min-height: 88px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: 24px;
+  background: #ffffff;
+  border: 1px solid $neutral-60;
+  border-radius: 4px;
+
+  .left {
+    padding-left: 8px;
+  }
+
+  &::placeholder {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $neutral-60;
+  }
+
+  &:focus {
+    transition: 1s;
+    border-color: $primary-50;
+  }
+}
+
+.hint .label {
+  font-size: 12.8px;
+  line-height: 20px;
+  color: $neutral-60;
+}
+
+.focused {
+  transition: 1s;
+  border-color: $primary-50;
+}
+
+.error {
+  transition: 1s;
+  border-color: $critical-50;
+}
+
+.success {
+  transition: 1s;
+  border-color: $success-50;
+}
+
+.disabled {
+  transition: 1s;
+  border-color: $neutral-60;
+  background-color: $neutral-10;
+}
