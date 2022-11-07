@@ -6,8 +6,8 @@ export default function LoginPage() {
   return (
     <div>
       <Link to="/">Home</Link>
-      <Input />
-      <Input />
+      <Input label="Электронная почта" placeholder="Введите e-mail" />
+      <Input label="Пароль" placeholder="Пароль" />
     </div>
   );
 }

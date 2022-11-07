@@ -10,6 +10,9 @@ export default function Input({
   disabled = false,
   leftIcon = false,
   rightIcon = false,
+  hint = false,
+  label = "",
+  placeholder = "",
 }) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
@@ -41,7 +44,7 @@ export default function Input({
 
   return (
     <div className={styles.inputContainer}>
-      <div className={styles.label}>label</div>
+      <div className={styles.label}>{label}</div>
       <div
         className={
           focused
@@ -54,13 +57,13 @@ export default function Input({
           onFocus={onFocus}
           onBlur={onBlur}
           className={inputStyles}
-          placeholder="placeholder"
+          placeholder={placeholder}
           type="text"
           disabled={disabled}
         />
         {rightIcon ? <img alt="inputDownArrow" src={InputDownArrow} /> : <></>}
       </div>
-      <div className={styles.hint}>hint text</div>
+      {hint ?? <div className={styles.hint}>hint text</div>}
     </div>
   );
 }
