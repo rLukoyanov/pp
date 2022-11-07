@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./TextArea.module.scss";
 
-export default function TextArea({
-  status = "default",
-  disabled = false,
-  leftIcon = false,
-  rightIcon = false,
-}) {
+export default function TextArea({ status = "default", disabled = false }) {
   let inputStyles = styles.textarea;
 
   switch (status) {

@@ -3,10 +3,12 @@ import Input from "./components/common/Input/Input";
 
 import styles from "./App.module.scss";
 import TextArea from "./components/common/TextArea/TextArea";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      <Link to="/login">Login page</Link>
       <h1>Test</h1>
       <h2>Test</h2>
       <h3>Test</h3>
