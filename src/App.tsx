@@ -4,6 +4,7 @@ import Input from "./components/common/Input/Input";
 import styles from "./App.module.scss";
 import TextArea from "./components/common/TextArea/TextArea";
 import { Link } from "react-router-dom";
+import Button from "./components/common/Button/Button";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
       <TextArea status="error" />
       <TextArea status="success" />
       <TextArea disabled />
+      <Button>Test</Button>
+      <Button disabled>Test</Button>
+      <Button type="outline" >Test</Button>
+      <Button type="outline" disabled>Test</Button>
     </div>
   );
 }
