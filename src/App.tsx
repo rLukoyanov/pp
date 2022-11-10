@@ -1,10 +1,9 @@
-import React from "react";
-import Input from "./components/common/Input/Input";
+import Input from './components/common/Input/Component';
 
-import styles from "./App.module.scss";
-import TextArea from "./components/common/TextArea/TextArea";
-import { Link } from "react-router-dom";
-import Button from "./components/common/Button/Button";
+import styles from './App.module.scss';
+import TextArea from './components/common/TextArea/Component';
+import { Link } from 'react-router-dom';
+import Button from './components/common/Button/Component';
 
 function App() {
   return (
@@ -38,8 +37,10 @@ function App() {
       <TextArea disabled />
       <Button>Test</Button>
       <Button disabled>Test</Button>
-      <Button type="outline" >Test</Button>
-      <Button type="outline" disabled>Test</Button>
+      <Button type="outline">Test</Button>
+      <Button type="outline" disabled>
+        Test
+      </Button>
     </div>
   );
 }

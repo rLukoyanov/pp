@@ -1,14 +1,13 @@
-import React from "react";
-import styles from "./Button.module.scss";
+import styles from './styles.module.scss';
 
 export default function Button({
-  children = "",
-  className = "",
+  children = '',
+  className = '',
   disabled = false,
-  type = "",
+  type = '',
 }) {
   let buttonStyles = styles.button;
-  if (type === "outline") {
+  if (type === 'outline') {
     buttonStyles = buttonStyles + ' ' + styles.outline;
   }
   return (

@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../components/common/Button/Button";
-import Input from "../components/common/Input/Input";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../components/common/Button/Component';
+import Input from '../components/common/Input/Component';
 
 export default function LoginPage() {
   return (

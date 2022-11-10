@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import { useState } from 'react';
 
-import InputArrow from "../../../images/input/inputArrow.svg";
-import InputDownArrow from "../../../images/input/inputDownArrow.svg";
+import InputArrow from '../../../images/input/inputArrow.svg';
+import InputDownArrow from '../../../images/input/inputDownArrow.svg';
 
-import styles from "./Input.module.scss";
+import styles from './Input.module.scss';
 
 export default function Input({
-  status = "default",
+  status = 'default',
   disabled = false,
   leftIcon = false,
   rightIcon = false,
   hint = false,
-  label = "",
-  placeholder = "",
+  label = '',
+  placeholder = '',
 }) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
@@ -21,13 +21,13 @@ export default function Input({
   let inputStyles = styles.input;
 
   switch (status) {
-    case "default":
+    case 'default':
       changeStyles = styles.outline;
       break;
-    case "error":
+    case 'error':
       changeStyles = styles.error;
       break;
-    case "success":
+    case 'success':
       changeStyles = styles.success;
       break;
   }
@@ -36,10 +36,10 @@ export default function Input({
   }
 
   if (leftIcon === true) {
-    inputStyles = inputStyles + " " + styles.left;
+    inputStyles = inputStyles + ' ' + styles.left;
   }
   if (rightIcon === true) {
-    inputStyles = inputStyles + " " + styles.right;
+    inputStyles = inputStyles + ' ' + styles.right;
   }
 
   return (
