@@ -1,9 +1,10 @@
-import Input from './components/common/Input/Component';
+import { Input } from './components/common/Input';
+import { TextArea } from './components/common/TextArea';
+import { Button } from './components/common/Button';
+
+import { Link } from 'react-router-dom';
 
 import styles from './App.module.scss';
-import TextArea from './components/common/TextArea/Component';
-import { Link } from 'react-router-dom';
-import Button from './components/common/Button/Component';
 
 function App() {
   return (
@@ -14,11 +15,8 @@ function App() {
       <h3>Test</h3>
       <h4>Test</h4>
       <h5>Test</h5>
-      <body>
-        Test
-        <div className={styles.bodySm}>Test</div>
-        <div className={styles.bodyXs}>Test</div>
-      </body>
+      <div className={styles.bodySm}>Test</div>
+      <div className={styles.bodyXs}>Test</div>
       <div className={`${styles.block} ${styles.elevetion2}`}></div>
       <div className={`${styles.block} ${styles.elevetion4}`}></div>
       <div className={`${styles.block} ${styles.elevetion8}`}></div>

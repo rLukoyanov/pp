@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-export default function Button({
+export function Button({
   children = '',
   className = '',
   disabled = false,

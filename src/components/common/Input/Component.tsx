@@ -7,7 +7,7 @@ import InputDownArrow from '../../../images/input/inputDownArrow.svg';
 
 import styles from './styles.module.scss';
 
-export default function Input({
+export function Input({
   status = 'default',
   disabled = false,
   leftIcon = false,
@@ -31,7 +31,7 @@ export default function Input({
   });
 
   return (
-    <div className={styles.inputContainer}>
+    <div className={styles['input-container']}>
       <div className={styles.label}>{label}</div>
       <div
         className={
