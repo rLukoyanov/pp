@@ -1,6 +1,6 @@
-@import "../../../App.module.scss";
+@import "../../../App.module";
 
-.inputContainer {
+.input-container {
   color: $neutral-60;
   display: flex;
   flex-direction: column;
@@ -9,11 +9,9 @@
     transition: 1s;
     display: flex;
     align-items: center;
-
     padding: 0 15px;
-
-    background: #ffffff;
-    border: 1px solid $neutral-60;
+    background: #fff;
+    border: 1px solid;
     border-radius: 4px;
   }
 
@@ -31,7 +29,7 @@
     }
 
     &::placeholder {
-      font-family: "Inter";
+      font-family: "Inter", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;

@@ -1,9 +1,9 @@
-@import "../../../App.module.scss";
+@import '../../../App.module';
 
 .button {
   background: $primary-50;
   border-radius: 4px;
-  font-family: "Inter";
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -34,10 +34,10 @@
 .outline {
   color: $primary-50;
   background: transparent;
-  border: 1px solid $primary-50;
+  border: 1px solid;
 
   &:hover {
-    border: 1px solid $primary-40;
+    border: 1px solid;
     color: $primary-40;
     background: transparent;
     cursor: pointer;
@@ -45,7 +45,7 @@
   }
 
   &:active {
-    border: 1px solid $primary-70;
+    border: 1px solid;
     color: $primary-70;
     background: transparent;
     transition: 0.5s;

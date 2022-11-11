@@ -1,23 +1,21 @@
-@import "../../../App.module.scss";
+@import "../../../App.module";
 
 .outline {
   transition: 1s;
   display: flex;
   align-items: center;
-
   padding: 0 15px;
 }
 
 .textarea {
   outline: none;
-  border: none;
   min-width: 392px;
   width: 500px;
   min-height: 88px;
   padding-top: 12px;
   padding-bottom: 12px;
   height: 24px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid $neutral-60;
   border-radius: 4px;
 
@@ -26,7 +24,7 @@
   }
 
   &::placeholder {
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

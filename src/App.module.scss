@@ -7,7 +7,7 @@ $primary-90: #00294d;
 $primary-80: #005299;
 $primary-70: #005fb3;
 $primary-60: #006dcc;
-$primary-50: #0088ff;
+$primary-50: #08f;
 $primary-40: #33a0ff;
 $primary-30: #66b8ff;
 $primary-20: #99cfff;
@@ -50,45 +50,45 @@ $info-10: #ccf7ff;
   height: 50px;
 }
 
-.bodySm {
-  font-family: "Inter";
+.body-sm {
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12.8px;
   line-height: 20px;
-  color: #000000;
+  color: #000;
 }
 
-.bodyXs {
-  font-family: "Inter";
+.body-xs {
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 16px;
-  color: #000000;
+  color: #000;
 }
 
 .elevetion2 {
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 1px rgba(0, 14, 51, 0.2);
+  background: #fff;
+  box-shadow: 0 0 2px 1px rgba(0, 14, 51, 20%);
 }
 
 .elevetion4 {
-  background: #ffffff;
-  box-shadow: 0px 0px 4px 1px rgba(0, 14, 51, 0.2);
+  background: #fff;
+  box-shadow: 0 0 4px 1px rgba(0, 14, 51, 20%);
 }
 
 .elevetion8 {
-  background: #ffffff;
-  box-shadow: 0px 0px 8px 2px rgba(0, 14, 51, 0.2);
+  background: #fff;
+  box-shadow: 0 0 8px 2px rgba(0, 14, 51, 20%);
 }
 
 .elevetion16 {
-  background: #ffffff;
-  box-shadow: 0px 0px 16px 3px rgba(0, 14, 51, 0.2);
+  background: #fff;
+  box-shadow: 0 0 16px 3px rgba(0, 14, 51, 20%);
 }
 
 .elevetion24 {
-  background: #ffffff;
-  box-shadow: 0px 0px 24px 4px rgba(0, 14, 51, 0.2);
+  background: #fff;
+  box-shadow: 0 0 24px 4px rgba(0, 14, 51, 20%);
 }
