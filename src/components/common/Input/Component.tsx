@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
+import classNames from 'classnames';
+
 import InputArrow from '../../../images/input/inputArrow.svg';
 import InputDownArrow from '../../../images/input/inputDownArrow.svg';
 
-import styles from './Input.module.scss';
+import styles from './styles.module.scss';
 
 export default function Input({
   status = 'default',
@@ -17,30 +19,16 @@ export default function Input({
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
   const onBlur = () => setFocused(false);
-  let changeStyles = styles.outline;
-  let inputStyles = styles.input;
+  const changeStyles = classNames(styles.outline, {
+    [styles.error]: status === 'error',
+    [styles.success]: status === 'success',
+    [styles.error]: status === 'error',
+  });
 
-  switch (status) {
-    case 'default':
-      changeStyles = styles.outline;
-      break;
-    case 'error':
-      changeStyles = styles.error;
-      break;
-    case 'success':
-      changeStyles = styles.success;
-      break;
-  }
-  if (disabled === true) {
-    changeStyles = styles.disabled;
-  }
-
-  if (leftIcon === true) {
-    inputStyles = inputStyles + ' ' + styles.left;
-  }
-  if (rightIcon === true) {
-    inputStyles = inputStyles + ' ' + styles.right;
-  }
+  const inputStyles = classNames(styles.input, {
+    [styles.left]: leftIcon,
+    [styles.right]: rightIcon,
+  });
 
   return (
     <div className={styles.inputContainer}>

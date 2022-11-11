@@ -1,22 +1,15 @@
-import styles from './TextArea.module.scss';
+import styles from './styles.module.scss';
+
+import classNames from 'classnames';
 
 export default function TextArea({ status = 'default', disabled = false }) {
-  let inputStyles = styles.textarea;
-
-  switch (status) {
-    case 'default':
-      inputStyles = styles.textarea + ' ' + styles.outline;
-      break;
-    case 'error':
-      inputStyles = styles.textarea + ' ' + styles.error;
-      break;
-    case 'success':
-      inputStyles = styles.textarea + ' ' + styles.success;
-      break;
-  }
-  if (disabled === true) {
-    inputStyles = styles.textarea + ' ' + styles.disabled;
-  }
+  const inputStyles = classNames(styles.textarea, {
+    [styles.outline]: status === 'default',
+    [styles.error]: status === 'error',
+    [styles.success]: status === 'success',
+    [styles.disabled]: status === 'disabled',
+  });
+  
   return (
     <textarea
       className={inputStyles}
