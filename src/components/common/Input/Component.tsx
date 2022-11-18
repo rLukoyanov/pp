@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import InputArrow from '../../../images/input/inputArrow.svg';
 import InputDownArrow from '../../../images/input/inputDownArrow.svg';
@@ -19,13 +19,13 @@ export function Input({
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
   const onBlur = () => setFocused(false);
-  const changeStyles = classNames(styles.outline, {
+  const classNamesStatus = cn(styles.outline, {
     [styles.error]: status === 'error',
     [styles.success]: status === 'success',
     [styles.error]: status === 'error',
   });
 
-  const inputStyles = classNames(styles.input, {
+  const classNamesInput = cn(styles.input, {
     [styles.left]: leftIcon,
     [styles.right]: rightIcon,
   });
@@ -33,18 +33,12 @@ export function Input({
   return (
     <div className={styles['input-container']}>
       <div className={styles.label}>{label}</div>
-      <div
-        className={
-          focused
-            ? `${styles.outline} ${styles.focused}`
-            : `${styles.outline} ${changeStyles}`
-        }
-      >
+      <div className={cn(classNamesStatus, { [styles.focused]: focused })}>
         {leftIcon ? <img alt="inputArrow" src={InputArrow} /> : <></>}
         <input
           onFocus={onFocus}
           onBlur={onBlur}
-          className={inputStyles}
+          className={classNamesInput}
           placeholder={placeholder}
           type="text"
           disabled={disabled}

@@ -1,9 +1,9 @@
 import styles from './styles.module.scss';
 
-import classNames from 'classnames';
+import cn from 'classnames';
 
 export function TextArea({ status = 'default', disabled = false }) {
-  const inputStyles = classNames(styles.textarea, {
+  const classNames = cn(styles.textarea, {
     [styles.outline]: status === 'default',
     [styles.error]: status === 'error',
     [styles.success]: status === 'success',
@@ -12,7 +12,7 @@ export function TextArea({ status = 'default', disabled = false }) {
 
   return (
     <textarea
-      className={inputStyles}
+      className={classNames}
       placeholder="placeholder"
       disabled={disabled}
     />

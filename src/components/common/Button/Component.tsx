@@ -1,3 +1,5 @@
+import cn from 'classnames';
+
 import styles from './styles.module.scss';
 
 export function Button({
@@ -6,12 +8,12 @@ export function Button({
   disabled = false,
   type = '',
 }) {
-  let buttonStyles = styles.button;
-  if (type === 'outline') {
-    buttonStyles = buttonStyles + ' ' + styles.outline;
-  }
+  const classNames = cn(styles.button, {
+    [styles.outline]: type === 'outline',
+  });
+
   return (
-    <button className={`${buttonStyles} ${className}`} disabled={disabled}>
+    <button className={`${classNames} ${className}`} disabled={disabled}>
       {children}
     </button>
   );
