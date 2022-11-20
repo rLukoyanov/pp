@@ -1,0 +1,59 @@
+@import '../../../App.module';
+
+.button {
+  background: $primary-50;
+  border-radius: 4px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px;
+  text-align: center;
+  color: $white;
+  border: none;
+  transition: 0.5s;
+  width: 100%;
+
+  &:hover {
+    background: $primary-60;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &:active {
+    background: $primary-70;
+    transition: 0.5s;
+  }
+
+  &:disabled {
+    background: $primary-5;
+  }
+}
+
+.outline {
+  color: $primary-50;
+  background: $transparent;
+  border: 1px solid;
+
+  &:hover {
+    border: 1px solid;
+    color: $primary-40;
+    background: $transparent;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &:active {
+    border: 1px solid;
+    color: $primary-70;
+    background: $transparent;
+    transition: 0.5s;
+  }
+
+  &:disabled {
+    border: 1px solid $primary-40;
+    color: $primary-5;
+    background: $transparent;
+  }
+}
