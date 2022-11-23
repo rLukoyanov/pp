@@ -5,6 +5,8 @@ import { Button } from './components/common/Button';
 import { Link } from 'react-router-dom';
 
 import styles from './App.module.scss';
+import { NavItem } from './components/Navigation/NavItem';
+import { NavList } from './components/Navigation/NavList';
 
 function App() {
   return (
@@ -39,6 +41,7 @@ function App() {
       <Button type="outline" disabled>
         Test
       </Button>
+      {/* <NavList navItems={[]} /> */}
     </div>
   );
 }
