@@ -1,17 +1,19 @@
-import { useState } from 'react';
-
 import cn from 'classnames';
 
 import { NavItem } from '../NavItem';
 
 import styles from './styles.module.scss';
 
-export function NavList({ navItems = [] }) {
+type NavListProps = {
+  navItems: string[];
+};
+
+export function NavList({ navItems = [] }: NavListProps) {
   const classNames = cn(styles['nav-item']);
   return (
     <ul className={classNames}>
       {navItems.map((item) => (
-        <NavItem>test</NavItem>
+        <NavItem>{item}</NavItem>
       ))}
     </ul>
   );

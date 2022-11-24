@@ -1,14 +1,21 @@
-import { Input } from './components/common/Input';
-import { TextArea } from './components/common/TextArea';
-import { Button } from './components/common/Button';
+import { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import styles from './App.module.scss';
-import { NavItem } from './components/Navigation/NavItem';
+import { Input } from './components/common/Input';
+import { TextArea } from './components/common/TextArea';
+import { Button } from './components/common/Button';
 import { NavList } from './components/Navigation/NavList';
 
+import styles from './App.module.scss';
+
 function App() {
+  const [navItems, setNavItems] = useState<string[]>([]);
+
+  useEffect(() => {
+    setNavItems(['Главная', 'Отклики', 'Вакансии', 'Профиль', 'Выход']);
+  }, []);
+
   return (
     <div className="App">
       <Link to="/login">Login page</Link>
@@ -41,7 +48,7 @@ function App() {
       <Button type="outline" disabled>
         Test
       </Button>
-      {/* <NavList navItems={[]} /> */}
+      <NavList navItems={navItems} />
     </div>
   );
 }
