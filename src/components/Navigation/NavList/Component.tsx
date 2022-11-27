@@ -9,7 +9,7 @@ type NavListProps = {
 };
 
 export function NavList({ navItems = [] }: NavListProps) {
-  const classNames = cn(styles['nav-item']);
+  const classNames = cn(styles['nav-list']);
   return (
     <ul className={classNames}>
       {navItems.map((item) => (

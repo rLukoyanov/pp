@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Header } from '../components/Header';
 import { NavList } from '../components/Navigation/NavList';
 // import Typography from '../components/common/Typography';
 
@@ -11,7 +12,8 @@ export default function MainPage() {
   }, []);
   return (
     <div>
-      <Link to="/">Home</Link>
+      <Link to="/login">login</Link>
+      <Header />
       <NavList navItems={navItems} />
     </div>
   );
