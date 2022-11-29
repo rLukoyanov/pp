@@ -15,6 +15,8 @@ export function Input({
   hint = false,
   label = '',
   placeholder = '',
+  preIcon = InputArrow,
+  width = '100%',
 }) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
@@ -31,10 +33,10 @@ export function Input({
   });
 
   return (
-    <div className={styles['input-container']}>
+    <div style={{ width: width }} className={styles['input-container']}>
       <div className={styles.label}>{label}</div>
       <div className={cn(classNamesStatus, { [styles.focused]: focused })}>
-        {leftIcon ? <img alt="inputArrow" src={InputArrow} /> : <></>}
+        {leftIcon ? <img src={preIcon} /> : <></>}
         <input
           onFocus={onFocus}
           onBlur={onBlur}

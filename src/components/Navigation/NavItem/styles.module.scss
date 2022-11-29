@@ -9,6 +9,8 @@
   width: 224px;
   cursor: pointer;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
 
   &:hover {
     background: $neutral-10;
@@ -18,5 +20,9 @@
   .active {
     background: $primary-10;
     color: $primary-50;
+  }
+
+  img {
+    margin-right: 10px;
   }
 }
