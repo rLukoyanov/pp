@@ -5,7 +5,7 @@ import { NavItem } from '../NavItem';
 import styles from './styles.module.scss';
 
 type NavListProps = {
-  navItems: { icon: string; text: string }[];
+  navItems: { icon: string; text: string, active: boolean }[];
 };
 
 export function NavList({ navItems = [] }: NavListProps) {
@@ -13,7 +13,7 @@ export function NavList({ navItems = [] }: NavListProps) {
   return (
     <ul className={classNames}>
       {navItems.map((item) => (
-        <NavItem icon={item.icon}>{item.text}</NavItem>
+        <NavItem active={item.active} icon={item.icon}>{item.text}</NavItem>
       ))}
     </ul>
   );

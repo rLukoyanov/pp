@@ -10,17 +10,15 @@ import profileSVG from '../images/navigation/Icon-profile.svg';
 import exitSVG from '../images/navigation/Icon-exit.svg';
 
 export default function MainPage() {
-  const [navItems, setNavItems] = useState<{ text: string; icon: string }[]>(
-    [],
-  );
+  const [navItems, setNavItems] = useState<{ text: string; icon: string; active: boolean }[]>([]);
 
   useEffect(() => {
     setNavItems([
-      { text: 'Главная', icon: homeSVG },
-      { text: 'Отклики', icon: responseSVG },
-      { text: 'Вакансии', icon: jobOffetsSVG },
-      { text: 'Профиль', icon: profileSVG },
-      { text: 'Выход', icon: exitSVG },
+      { text: 'Главная', icon: homeSVG, active: true },
+      { text: 'Отклики', icon: responseSVG, active: false },
+      { text: 'Вакансии', icon: jobOffetsSVG, active: false },
+      { text: 'Профиль', icon: profileSVG, active: false },
+      { text: 'Выход', icon: exitSVG, active: false },
     ]);
   }, []);
   return (

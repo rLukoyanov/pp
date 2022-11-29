@@ -14,15 +14,16 @@
 
   &:hover {
     background: $neutral-10;
+    color: $primary-90;
     transition: 0.5s;
-  }
-
-  .active {
-    background: $primary-10;
-    color: $primary-50;
   }
 
   img {
     margin-right: 10px;
   }
+}
+
+.active {
+  background: $primary-10;
+  color: $primary-50;
 }
