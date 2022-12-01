@@ -11,15 +11,15 @@ export function Header() {
   const classNames = cn(styles.header);
   return (
     <div className={classNames}>
-      <div className={styles.leftBlock}>left</div>
-      <div className={styles.rigthBlock}>
+      <div className={styles['left-block']}>left</div>
+      <div className={styles['rigth-block']}>
         <Input
           placeholder="Search"
           preIcon={SearchSVG}
           leftIcon
           width="356px"
         />
-        <div className={styles.profileBlock}>
+        <div className={styles['profile-block']}>
           <img
             className={styles.notifications}
             width={48}

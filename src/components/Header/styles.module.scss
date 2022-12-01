@@ -6,12 +6,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  .rigthBlock {
+  .rigth-block {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    .profileBlock {
+    .profile-block {
       display: flex;
       align-items: center;
       

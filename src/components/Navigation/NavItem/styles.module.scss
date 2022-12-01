@@ -24,6 +24,7 @@
 }
 
 .active {
-  background: $primary-10;
-  color: $primary-50;
+  background: $primary-10 !important;
+  color: $primary-50 !important;
+  transition: 0.5s;
 }
