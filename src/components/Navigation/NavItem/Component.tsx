@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 
 import styles from './styles.module.scss';
 
+type NavItemProps = {
+  children: React.ReactNode;
+  active: boolean;
+  icon: string;
+  url: string;
+};
+
 export function NavItem({
-  children = '',
+  children,
   active = false,
   icon = '',
   url = '/',
-}) {
+}: NavItemProps) {
   const classNames = cn(styles['nav-item'], { [styles.active]: active });
 
   const changeActive = () => {};

@@ -14,7 +14,12 @@ import styles from './styles.module.scss';
 export function NavList() {
   const classNames = cn(styles['nav-list']);
 
-  const navButtons = [
+  const navButtons: {
+    text: string;
+    icon: string;
+    active: boolean;
+    url: string;
+  }[] = [
     { text: 'Главная', icon: homeSVG, active: true, url: '/' },
     { text: 'Отклики', icon: responseSVG, active: false, url: '/responses' },
     { text: 'Вакансии', icon: jobOffetsSVG, active: false, url: '/offers' },

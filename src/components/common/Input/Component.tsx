@@ -7,6 +7,18 @@ import InputDownArrow from '../../../images/input/inputDownArrow.svg';
 
 import styles from './styles.module.scss';
 
+type InputProps = {
+  status?: string;
+  disabled?: boolean;
+  leftIcon?: boolean;
+  rightIcon?: boolean;
+  hint?: boolean;
+  label?: string;
+  placeholder?: string;
+  preIcon?: string;
+  width?: string;
+};
+
 export function Input({
   status = 'default',
   disabled = false,
@@ -17,7 +29,7 @@ export function Input({
   placeholder = '',
   preIcon = InputArrow,
   width = '100%',
-}) {
+}: InputProps) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
   const onBlur = () => setFocused(false);
