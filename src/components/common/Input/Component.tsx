@@ -45,7 +45,7 @@ export function Input({
   });
 
   return (
-    <div style={{ width: width }} className={styles['input-container']}>
+    <div className={styles['input-container']}>
       <div className={styles.label}>{label}</div>
       <div className={cn(classNamesStatus, { [styles.focused]: focused })}>
         {leftIcon ? <img src={preIcon} /> : <></>}
