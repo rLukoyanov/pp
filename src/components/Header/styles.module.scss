@@ -1,0 +1,23 @@
+@import '../../App';
+
+.header {
+  background: $neutral-5;
+  height: 112px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rigth-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-block {
+  display: flex;
+  align-items: center;
+}
+
+.notifications {
+  margin-right: 36px;
+}

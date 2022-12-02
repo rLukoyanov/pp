@@ -1,0 +1,30 @@
+@import '../../../App';
+
+.nav-item {
+  background: $transparent;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 8px;
+  padding-left: 44px;
+  width: 224px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: $neutral-10;
+    color: $primary-90;
+    transition: 0.5s;
+  }
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.active {
+  background: $primary-10 !important;
+  color: $primary-50 !important;
+  transition: 0.5s;
+}

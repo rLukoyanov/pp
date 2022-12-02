@@ -2,7 +2,15 @@ import styles from './styles.module.scss';
 
 import cn from 'classnames';
 
-export function TextArea({ status = 'default', disabled = false }) {
+type TextAreaProps = {
+  status: string;
+  disabled: boolean;
+};
+
+export function TextArea({
+  status = 'default',
+  disabled = false,
+}: TextAreaProps) {
   const classNames = cn(styles.textarea, {
     [styles.outline]: status === 'default',
     [styles.error]: status === 'error',
