@@ -2,12 +2,16 @@ import { Header } from './components/Header';
 import { NavList } from './components/Navigation/NavList';
 import MainPage from './routes/MainPage';
 
+import './App.scss';
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <NavList />
-      <MainPage />
+      <div className="main">
+        <NavList />
+        <MainPage />
+      </div>
     </div>
   );
 }
