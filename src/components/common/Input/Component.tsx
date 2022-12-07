@@ -28,7 +28,6 @@ export function Input({
   label = '',
   placeholder = '',
   preIcon = InputArrow,
-  width = '100%',
 }: InputProps) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
