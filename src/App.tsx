@@ -3,6 +3,7 @@ import { NavList } from './components/Navigation/NavList';
 import MainPage from './routes/MainPage';
 
 import './App.scss';
+import { Input } from './components/common/Input';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="main">
         <NavList />
         <MainPage />
+        <Input status="success" />
       </div>
     </div>
   );

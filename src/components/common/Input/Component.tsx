@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import cn from 'classnames';
 
@@ -8,6 +8,7 @@ import InputDownArrow from '../../../images/input/inputDownArrow.svg';
 import styles from './styles.module.scss';
 
 type InputProps = {
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   status?: string;
   disabled?: boolean;
   leftIcon?: boolean;
@@ -20,6 +21,7 @@ type InputProps = {
 };
 
 export function Input({
+  onChange = () => {},
   status = 'default',
   disabled = false,
   leftIcon = false,
@@ -35,7 +37,6 @@ export function Input({
   const classNamesStatus = cn(styles.outline, {
     [styles.error]: status === 'error',
     [styles.success]: status === 'success',
-    [styles.error]: status === 'error',
   });
 
   const classNamesInput = cn(styles.input, {
@@ -46,9 +47,13 @@ export function Input({
   return (
     <div className={styles['input-container']}>
       <div className={styles.label}>{label}</div>
-      <div className={cn(classNamesStatus, { [styles.focused]: focused })}>
+      <div
+        data-testid="input"
+        className={cn(classNamesStatus, { [styles.focused]: focused })}
+      >
         {leftIcon ? <img src={preIcon} /> : <></>}
         <input
+          onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
           className={classNamesInput}
