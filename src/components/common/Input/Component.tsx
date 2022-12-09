@@ -51,7 +51,7 @@ export function Input({
         data-testid="input"
         className={cn(classNamesStatus, { [styles.focused]: focused })}
       >
-        {leftIcon ? <img src={preIcon} /> : <></>}
+        {leftIcon ? <img data-testid="leftIcon" src={preIcon} /> : <></>}
         <input
           onChange={onChange}
           onFocus={onFocus}
@@ -61,7 +61,15 @@ export function Input({
           type="text"
           disabled={disabled}
         />
-        {rightIcon ? <img alt="inputDownArrow" src={InputDownArrow} /> : <></>}
+        {rightIcon ? (
+          <img
+            data-testid="rightIcon"
+            alt="inputDownArrow"
+            src={InputDownArrow}
+          />
+        ) : (
+          <></>
+        )}
       </div>
       {hint ?? <div className={styles.hint}>hint text</div>}
     </div>

@@ -39,4 +39,22 @@ describe('Input', () => {
 
     expect(component).toBeDisabled();
   });
+
+  it('should check leftIcon prop', () => {
+    render(<Input leftIcon />);
+    const component = screen.getByTestId('leftIcon');
+    expect(component).toBeInTheDocument();
+  });
+
+  it('should check rightIcon prop', () => {
+    render(<Input rightIcon />);
+    const component = screen.getByTestId('rightIcon');
+    expect(component).toBeInTheDocument();
+  });
+
+  it('should check label prop', () => {
+    render(<Input label="123" />);
+    const component = screen.getByText('123');
+    expect(component.textContent).toBe('123');
+  });
 });
