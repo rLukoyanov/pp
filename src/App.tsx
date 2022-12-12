@@ -12,7 +12,6 @@ function App() {
       <div className="main">
         <NavList />
         <MainPage />
-        <Input status="success" />
       </div>
     </div>
   );

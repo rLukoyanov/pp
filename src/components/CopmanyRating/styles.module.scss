@@ -1,1 +1,38 @@
 @import '../../App';
+
+.rating {
+  max-width: 754px;
+  width: 100%;
+  font-size: 20px;
+
+  span {
+    font-weight: 700;
+    font-size: 20px;
+    color: $primary-50;
+  }
+}
+
+.rating-item {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 8px;
+  height: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  background: $white;
+  border-radius: 8px;
+}
+
+.groups {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  font-size: 12.8px;
+}
+
+.students {
+  padding-left: 20px;
+}
