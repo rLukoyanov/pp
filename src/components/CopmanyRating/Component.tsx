@@ -1,8 +1,11 @@
+import companyLogoSVG from '../../assets/image1.svg';
+
 import styles from './styles.module.scss';
 
 export function CompanyRating() {
   return (
     <div className={styles.rating}>
+      <h3>Рейтинг Компаний</h3>
       <div className={styles.groups}>
         <div>Место</div>
         <div>Компания</div>
@@ -11,25 +14,37 @@ export function CompanyRating() {
       </div>
       <div className={styles['rating-item']}>
         <div>1</div>
-        <span>iPlast</span>
+        <span className={styles.name}>
+          <img src={companyLogoSVG} />
+          <span>iPlast</span>
+        </span>
         <div>Промышленность</div>
         <div className={styles.students}>30 студентов</div>
       </div>
       <div className={styles['rating-item']}>
         <div>2</div>
-        <span>Татнефть</span>
+        <span className={styles.name}>
+          <img src={companyLogoSVG} />
+          <span>iPlast</span>
+        </span>
         <div>Промышленность</div>
         <div className={styles.students}>30 студентов</div>
       </div>
       <div className={styles['rating-item']}>
         <div>3</div>
-        <span>СДЭК</span>
+        <span className={styles.name}>
+          <img src={companyLogoSVG} />
+          <span>iPlast</span>
+        </span>
         <div>Логистика</div>
         <div className={styles.students}>30 студентов</div>
       </div>
       <div className={styles['rating-item']}>
         <div>4</div>
-        <span>iPlast</span>
+        <span className={styles.name}>
+          <img src={companyLogoSVG} />
+          <span>iPlast</span>
+        </span>
         <div>Промышленность</div>
         <div className={styles.students}>30 студентов</div>
       </div>

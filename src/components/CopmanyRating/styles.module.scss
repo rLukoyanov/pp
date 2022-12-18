@@ -36,3 +36,12 @@
 .students {
   padding-left: 20px;
 }
+
+.name {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 13px;
+  }
+}
