@@ -16,6 +16,7 @@ export function Header() {
         <Input
           placeholder="Search"
           preIcon={SearchSVG}
+          classNames={styles.input}
           leftIcon
           width="356px"
         />

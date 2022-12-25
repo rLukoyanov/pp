@@ -9,6 +9,7 @@ import styles from './styles.module.scss';
 
 type InputProps = {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  classNames?: string;
   status?: string;
   disabled?: boolean;
   leftIcon?: boolean;
@@ -21,6 +22,7 @@ type InputProps = {
 };
 
 export function Input({
+  classNames = '',
   onChange = () => {},
   status = 'default',
   disabled = false,
@@ -42,10 +44,11 @@ export function Input({
   const classNamesInput = cn(styles.input, {
     [styles.left]: leftIcon,
     [styles.right]: rightIcon,
+    [classNames]: classNames,
   });
 
   return (
-    <div className={styles['input-container']}>
+    <div className={cn(styles.inputContainer, { [classNames]: classNames })}>
       <div className={styles.label}>{label}</div>
       <div
         data-testid="input"
