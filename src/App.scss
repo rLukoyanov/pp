@@ -51,6 +51,11 @@ $info-60: #2e8799;
 $info-50: #3db4cc;
 $info-10: #ccf7ff;
 
+a {
+  color: $primary-50;
+  text-decoration: none;
+}
+
 .block {
   width: 50px;
   height: 50px;

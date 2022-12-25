@@ -1,0 +1,24 @@
+@import '../../App';
+
+.newVacancies {
+  max-width: 754px;
+  h2 {
+    margin-top: 32px;
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 25px;
+    color: $primary-90;
+  }
+}
+
+.background {
+  max-width: 754px;
+  width: 100%;
+  background: $white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}

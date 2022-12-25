@@ -1,6 +1,10 @@
 @import '../../App';
 
 .rating {
+  h3 {
+    margin: 0;
+    margin-bottom: 16px;
+  }
   max-width: 754px;
   width: 100%;
   font-size: 20px;
@@ -13,7 +17,6 @@
 }
 
 .ratingItem {
-  width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 8px;

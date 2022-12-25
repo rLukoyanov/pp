@@ -48,6 +48,15 @@ export function CompanyRating() {
         <div>Промышленность</div>
         <div className={styles.students}>30 студентов</div>
       </div>
+      <div className={styles.ratingItem}>
+        <div>5</div>
+        <span className={styles.name}>
+          <img src={companyLogoSVG} />
+          <span>iPlast</span>
+        </span>
+        <div>Промышленность</div>
+        <div className={styles.students}>30 студентов</div>
+      </div>
     </div>
   );
 }
