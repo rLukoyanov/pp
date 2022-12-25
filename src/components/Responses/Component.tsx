@@ -7,7 +7,7 @@ export function Responses() {
     <div className={styles.responses}>
       <h2>Мои отклики</h2>
       <div className={styles.response}>
-        <img src={companyLogoSVG}/>
+        <img src={companyLogoSVG} />
         <h3>Курьер</h3>
         <div className={styles.info}>
           <span>Мэйджор Экспресс</span>{' '}

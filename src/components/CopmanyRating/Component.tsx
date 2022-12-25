@@ -12,7 +12,7 @@ export function CompanyRating() {
         <div>Отрасль</div>
         <div className={styles.students}>Принято студентов</div>
       </div>
-      <div className={styles['rating-item']}>
+      <div className={styles.ratingItem}>
         <div>1</div>
         <span className={styles.name}>
           <img src={companyLogoSVG} />
@@ -21,7 +21,7 @@ export function CompanyRating() {
         <div>Промышленность</div>
         <div className={styles.students}>30 студентов</div>
       </div>
-      <div className={styles['rating-item']}>
+      <div className={styles.ratingItem}>
         <div>2</div>
         <span className={styles.name}>
           <img src={companyLogoSVG} />
@@ -30,7 +30,7 @@ export function CompanyRating() {
         <div>Промышленность</div>
         <div className={styles.students}>30 студентов</div>
       </div>
-      <div className={styles['rating-item']}>
+      <div className={styles.ratingItem}>
         <div>3</div>
         <span className={styles.name}>
           <img src={companyLogoSVG} />
@@ -39,7 +39,7 @@ export function CompanyRating() {
         <div>Логистика</div>
         <div className={styles.students}>30 студентов</div>
       </div>
-      <div className={styles['rating-item']}>
+      <div className={styles.ratingItem}>
         <div>4</div>
         <span className={styles.name}>
           <img src={companyLogoSVG} />
