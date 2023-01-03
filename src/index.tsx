@@ -7,6 +7,8 @@ import LoginPage from './routes/LoginPage';
 import ErrorPage from './routes/ErrorPage';
 
 import './styles.scss';
+import MainPage from './routes/MainPage';
+import VacanciesPage from './routes/VacanciesPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -15,12 +17,24 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <App>
+        <MainPage />
+      </App>
+    ),
     errorElement: <ErrorPage />,
   },
   {
     path: 'login',
     element: <LoginPage />,
+  },
+  {
+    path: 'offers',
+    element: (
+      <App>
+        <VacanciesPage />
+      </App>
+    ),
   },
 ]);
 

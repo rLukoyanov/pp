@@ -2,7 +2,7 @@ import { CompanyRating } from '../components/CopmanyRating';
 import { NewVacancies } from '../components/NewVacancies';
 import { Responses } from '../components/Responses';
 
-import styles from './MainPage.module.scss';
+import styles from './Pages.module.scss';
 
 export default function MainPage() {
   return (

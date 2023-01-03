@@ -5,16 +5,22 @@ import styles from './styles.module.scss';
 
 export function Vacancies() {
   return (
-    <Link to="vacancies">
+    <div className={styles.offer}>
       <div className={styles.header}>от 45 000 руб</div>
       <h2>Сборщик-грузчик</h2>
-      <div>Без опыта Сменный график Полная занятость</div>
-      <div>
+      <div className={styles.advantages}>
+        <span>Без опыта</span>
+        <span>Сменный график</span>
+        <span>Полная занятость</span>
+      </div>
+      <div className="body-sm">
         В обязанности входят: внутрискладская переработка грузов ( разбор
         заказов по маршрутам доставки), а так же сортировка, укладка, перенос
         товара и т.д.
       </div>
-      <Button>Подробнее</Button>
-    </Link>
+      <Link to="vacancies">
+        <Button>Подробнее</Button>
+      </Link>
+    </div>
   );
 }
