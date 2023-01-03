@@ -34,6 +34,11 @@ $critical-60: #b34758;
 $critical-50: #e65c71;
 $critical-10: #ffccd4;
 
+$warning-80: #66411f;
+$warning-60: #99622e;
+$warning-50: #cc823d;
+$warning-10: #ffe5cc;
+
 // *success
 $success-80: #26802a;
 $success-60: #3dcc43;
@@ -45,6 +50,11 @@ $info-80: #1f5a66;
 $info-60: #2e8799;
 $info-50: #3db4cc;
 $info-10: #ccf7ff;
+
+a {
+  color: $primary-50;
+  text-decoration: none;
+}
 
 .block {
   width: 50px;
@@ -92,4 +102,8 @@ $info-10: #ccf7ff;
 .elevetion24 {
   background: #fff;
   box-shadow: 0 0 24px 4px rgb(0 14 51 / 20%);
+}
+
+.main {
+  display: flex;
 }

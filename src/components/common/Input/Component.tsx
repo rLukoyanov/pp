@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import cn from 'classnames';
 
@@ -8,6 +8,8 @@ import InputDownArrow from '../../../images/input/inputDownArrow.svg';
 import styles from './styles.module.scss';
 
 type InputProps = {
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  classNames?: string;
   status?: string;
   disabled?: boolean;
   leftIcon?: boolean;
@@ -20,6 +22,8 @@ type InputProps = {
 };
 
 export function Input({
+  classNames = '',
+  onChange = () => {},
   status = 'default',
   disabled = false,
   leftIcon = false,
@@ -28,7 +32,6 @@ export function Input({
   label = '',
   placeholder = '',
   preIcon = InputArrow,
-  width = '100%',
 }: InputProps) {
   const [focused, setFocused] = useState(false);
   const onFocus = () => setFocused(true);
@@ -36,20 +39,24 @@ export function Input({
   const classNamesStatus = cn(styles.outline, {
     [styles.error]: status === 'error',
     [styles.success]: status === 'success',
-    [styles.error]: status === 'error',
   });
 
   const classNamesInput = cn(styles.input, {
     [styles.left]: leftIcon,
     [styles.right]: rightIcon,
+    [classNames]: classNames,
   });
 
   return (
-    <div className={styles['input-container']}>
+    <div className={cn(styles.inputContainer, { [classNames]: classNames })}>
       <div className={styles.label}>{label}</div>
-      <div className={cn(classNamesStatus, { [styles.focused]: focused })}>
-        {leftIcon ? <img src={preIcon} /> : <></>}
+      <div
+        data-testid="input"
+        className={cn(classNamesStatus, { [styles.focused]: focused })}
+      >
+        {leftIcon ? <img data-testid="leftIcon" src={preIcon} /> : <></>}
         <input
+          onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
           className={classNamesInput}
@@ -57,7 +64,15 @@ export function Input({
           type="text"
           disabled={disabled}
         />
-        {rightIcon ? <img alt="inputDownArrow" src={InputDownArrow} /> : <></>}
+        {rightIcon ? (
+          <img
+            data-testid="rightIcon"
+            alt="inputDownArrow"
+            src={InputDownArrow}
+          />
+        ) : (
+          <></>
+        )}
       </div>
       {hint ?? <div className={styles.hint}>hint text</div>}
     </div>

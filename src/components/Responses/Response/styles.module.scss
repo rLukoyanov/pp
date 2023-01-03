@@ -1,0 +1,37 @@
+@import '../../../App';
+
+.response {
+  background: $white;
+  border-radius: 8px;
+  max-width: 307px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.info {
+  position: relative;
+  svg {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+}
+
+.status {
+  margin-top: 12px;
+  border-radius: 100px;
+  padding: 4px 16px;
+  display: inline-block;
+}
+
+.invite {
+  background-color: $success-10;
+}
+
+.waiting {
+  background-color: $warning-10;
+}
+
+.checked {
+  background-color: $info-10;
+}

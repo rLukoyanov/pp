@@ -1,0 +1,50 @@
+@import '../../App';
+
+.rating {
+  h3 {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  max-width: 754px;
+  width: 100%;
+  font-size: 20px;
+
+  span {
+    font-weight: 700;
+    font-size: 20px;
+    color: $primary-50;
+  }
+}
+
+.ratingItem {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 8px;
+  height: 48px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  align-items: center;
+  background: $white;
+  border-radius: 8px;
+}
+
+.groups {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  align-items: center;
+  font-size: 12.8px;
+}
+
+.students {
+  padding-left: 20px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 13px;
+  }
+}
