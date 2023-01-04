@@ -1,4 +1,4 @@
-@import '../../App';
+@import '../../../App';
 
 .offer {
   background-color: $white;
@@ -10,6 +10,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-top: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .advantages {

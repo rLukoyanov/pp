@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
-import { Button } from '../common/Button';
+import { Button } from '../../common/Button';
+
+import CompanySVG from '../../../assets/image1.svg';
 
 import styles from './styles.module.scss';
 
-export function Vacancies() {
+export function Offer() {
   return (
     <div className={styles.offer}>
-      <div className={styles.header}>от 45 000 руб</div>
+      <div className={styles.header}>
+        <img src={CompanySVG} />
+        <span>от 45 000 руб</span>
+      </div>
       <h2>Сборщик-грузчик</h2>
       <div className={styles.advantages}>
         <span>Без опыта</span>
