@@ -13,6 +13,34 @@ const useStyles = makeStyles(() => ({
 
 export function Offers() {
   const selectStyles = useStyles();
+
+  const offers = [
+    {
+      id: 1,
+      title: 'First',
+    },
+    {
+      id: 2,
+      title: 'Second',
+    },
+    {
+      id: 3,
+      title: 'Third',
+    },
+    {
+      id: 4,
+      title: 'Fouth',
+    },
+    {
+      id: 5,
+      title: 'Fifth',
+    },
+    {
+      id: 6,
+      title: 'Six',
+    },
+  ];
+
   return (
     <div>
       <div className={styles.select}>
@@ -38,18 +66,9 @@ export function Offers() {
         </Select>
       </div>
       <ul className={styles.offers}>
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
-        <Offer />
+        {offers.map((offer) => (
+          <Offer id={offer.id} title={offer.title} />
+        ))}
       </ul>
     </div>
   );

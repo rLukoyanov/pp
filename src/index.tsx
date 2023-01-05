@@ -9,6 +9,7 @@ import ErrorPage from './routes/ErrorPage';
 import './styles.scss';
 import MainPage from './routes/MainPage';
 import VacanciesPage from './routes/VacanciesPage';
+import { OfferPage } from './routes/OfferPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -33,6 +34,17 @@ const router = createBrowserRouter([
     element: (
       <App>
         <VacanciesPage />
+      </App>
+    ),
+  },
+  {
+    path: 'offers/:offerId',
+    loader: ({ params }) => {
+      return params.offerId;
+    },
+    element: (
+      <App>
+        <OfferPage />
       </App>
     ),
   },

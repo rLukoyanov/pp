@@ -5,14 +5,19 @@ import CompanySVG from '../../../assets/image1.svg';
 
 import styles from './styles.module.scss';
 
-export function Offer() {
+type OfferProps = {
+  id: number;
+  title: string;
+};
+
+export function Offer({ id = 0, title = '' }: OfferProps) {
   return (
     <div className={styles.offer}>
       <div className={styles.header}>
         <img src={CompanySVG} />
         <span>от 45 000 руб</span>
       </div>
-      <h2>Сборщик-грузчик</h2>
+      <h2>{title}</h2>
       <div className={styles.advantages}>
         <span>Без опыта</span>
         <span>Сменный график</span>
@@ -23,7 +28,7 @@ export function Offer() {
         заказов по маршрутам доставки), а так же сортировка, укладка, перенос
         товара и т.д.
       </div>
-      <Link to="vacancies">
+      <Link to={id.toString()}>
         <Button>Подробнее</Button>
       </Link>
     </div>
