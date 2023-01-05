@@ -1,4 +1,5 @@
 import companySVG from '../../../assets/image1.svg';
+import { Advantage } from '../../common/Advantage';
 import { Button } from '../../common/Button';
 
 import styles from './styles.module.scss';
@@ -12,9 +13,9 @@ export function Vacancy() {
       </div>
       <h3>Сборщик-грузчик</h3>
       <div className={styles.advantages}>
-        <span>Без опыта</span>
-        <span>Практика</span>
-        <span>Полная занятость</span>
+        <Advantage>Без опыта</Advantage>
+        <Advantage>Практика</Advantage>
+        <Advantage last>Полная занятость</Advantage>
       </div>
       <Button>Подробнее</Button>
     </div>

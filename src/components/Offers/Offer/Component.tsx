@@ -4,6 +4,7 @@ import { Button } from '../../common/Button';
 import CompanySVG from '../../../assets/image1.svg';
 
 import styles from './styles.module.scss';
+import { Advantage } from '../../common/Advantage';
 
 type OfferProps = {
   id: number;
@@ -19,11 +20,11 @@ export function Offer({ id = 0, title = '' }: OfferProps) {
       </div>
       <h2>{title}</h2>
       <div className={styles.advantages}>
-        <span>Без опыта</span>
-        <span>Сменный график</span>
-        <span>Полная занятость</span>
+        <Advantage>Без опыта</Advantage>
+        <Advantage>Сменный график</Advantage>
+        <Advantage last>Полная занятость</Advantage>
       </div>
-      <div className="body-sm">
+      <div className="body-sm" style={{ flex: 1 }}>
         В обязанности входят: внутрискладская переработка грузов ( разбор
         заказов по маршрутам доставки), а так же сортировка, укладка, перенос
         товара и т.д.
