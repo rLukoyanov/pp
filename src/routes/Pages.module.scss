@@ -24,6 +24,23 @@ $contentHeigth: calc(100vh - 144px);
   overflow-y: scroll;
   height: $contentHeigth;
 
+  .back {
+    background-color: $white;
+    display: inline-block;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    padding-left: 40px;
+    background-image: url('../assets/arrow.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 25px;
+  }
+
   .offer {
     padding: 32px;
     background-color: $white;
@@ -34,6 +51,7 @@ $contentHeigth: calc(100vh - 144px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 24px 0;
   }
 
   .buttons {
@@ -65,5 +83,17 @@ $contentHeigth: calc(100vh - 144px);
 
   .container {
     width: 766px;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    background-image: url('../assets/check.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding-left: 32px;
   }
 }

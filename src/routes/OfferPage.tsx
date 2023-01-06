@@ -11,7 +11,7 @@ export function OfferPage({}) {
 
   return (
     <div className={styles.offerPage}>
-      <Link to="/offers">Вернуться назад</Link>
+      <Link className={styles.back} to="/offers">Вернуться назад</Link>
       <div className={styles.offer}>
         <div className={styles.buttons}>
           <Button className={styles.firstButton}>Откликнуться</Button>
