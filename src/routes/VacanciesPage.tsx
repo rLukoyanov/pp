@@ -1,11 +1,11 @@
-import { Vacancies } from '../components/Vacancies';
+import { Offers } from '../components/Offers';
 
 import styles from './Pages.module.scss';
 
 export default function VacanciesPage() {
   return (
     <div className={styles.offers}>
-      <Vacancies />
+      <Offers />
     </div>
   );
 }
