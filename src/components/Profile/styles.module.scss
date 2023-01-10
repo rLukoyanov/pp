@@ -1,0 +1,17 @@
+@import '../../App';
+
+.profile {
+  background-color: $white;
+  border-radius: 16px;
+  padding: 34px;
+  height: 334px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
