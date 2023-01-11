@@ -1,7 +1,9 @@
 import avatarPNG from '../../assets/avarar.png';
 import editSVG from '../../assets/Icon-edit.svg';
+
 import { Advantage } from '../common/Advantage';
 import { Contact } from './Contact';
+
 import styles from './styles.module.scss';
 
 export function Profile() {

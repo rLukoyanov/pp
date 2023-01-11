@@ -103,6 +103,8 @@ $contentHeigth: calc(100vh - 144px);
   overflow-y: scroll;
   padding: 32px 32px 0 32px;
   width: 100%;
+
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
