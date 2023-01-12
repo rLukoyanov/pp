@@ -3,8 +3,8 @@ import styles from './styles.module.scss';
 import cn from 'classnames';
 
 type TextAreaProps = {
-  status: string;
-  disabled: boolean;
+  status?: string;
+  disabled?: boolean;
 };
 
 export function TextArea({

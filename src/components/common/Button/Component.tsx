@@ -8,6 +8,7 @@ type ButtonProps = {
   className?: string;
   disabled?: boolean;
   type?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 export function Button({
@@ -15,13 +16,18 @@ export function Button({
   className = '',
   disabled = false,
   type = '',
+  onClick,
 }: ButtonProps) {
   const classNames = cn(styles.button, {
     [styles.outline]: type === 'outline',
   });
 
   return (
-    <button className={`${classNames} ${className}`} disabled={disabled}>
+    <button
+      onClick={onClick}
+      className={`${classNames} ${className}`}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

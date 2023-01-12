@@ -1,0 +1,74 @@
+@import '../../../../App';
+
+.workExp {
+  height: 100%;
+  white-space: pre-line;
+  background-color: $white;
+  padding: 33px;
+  border-radius: 16px;
+  margin-top: 25px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 32px;
+    margin-left: 32px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin: 0;
+    margin-left: 24px;
+  }
+
+  .companyAvatar {
+    width: 92px;
+    height: 92px;
+  }
+
+  .info {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+
+    margin-top: 8px;
+
+    span {
+      margin-left: 11px;
+    }
+  }
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+
+  img {
+    &:last-child {
+      margin-left: 16px;
+    }
+  }
+}
+
+.blue {
+  color: $primary-50;
+}
+
+.content {
+  border-bottom: 1px solid $neutral-30;
+  padding-bottom: 40px;
+}
