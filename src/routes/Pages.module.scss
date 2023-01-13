@@ -105,10 +105,6 @@ $contentHeigth: calc(100vh - 144px);
   padding: 32px 32px 0 32px;
   width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   .unscroll {
     overflow: hidden;
   }
@@ -125,10 +121,13 @@ $contentHeigth: calc(100vh - 144px);
     line-height: 24px;
     padding-bottom: 11px;
     border-bottom: 1px solid $neutral-30;
+    transition: 0.5s;
+    cursor: pointer;
   }
 
   .active {
     color: $primary-50;
     border-bottom: 2px solid $primary-50;
+    transition: 0.5s;
   }
 }
