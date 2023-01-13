@@ -1,6 +1,6 @@
 @import '../../../../App';
 
-.card {
+.addAchieve {
   position: fixed;
   background-color: $white;
   top: 0;
@@ -26,18 +26,22 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 32px;
   h2 {
     margin: 0;
   }
 }
 
-.input {
-  background-color: $white;
+.upload {
+  width: 137px;
+  height: 32px;
+  padding: 4px;
+  display: block;
 }
 
 .close {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
