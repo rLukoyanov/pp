@@ -45,6 +45,11 @@ export function WorkExp() {
         title="React developer"
         content={text}
       />
+      <Card
+        time="Cентябрь 2020 - Май 2021"
+        title="React developer"
+        content={text}
+      />
     </div>
   );
 }

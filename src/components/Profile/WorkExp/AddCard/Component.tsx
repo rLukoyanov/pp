@@ -1,3 +1,4 @@
+import { Button } from '../../../common/Button';
 import { Input } from '../../../common/Input';
 import { TextArea } from '../../../common/TextArea';
 import styles from './styles.module.scss';
@@ -25,6 +26,8 @@ export function AddCard({
           <h3>Детали</h3>
           <TextArea />
         </label>
+        <br />
+        <Button>Разместить</Button>
       </div>
     </div>
   );

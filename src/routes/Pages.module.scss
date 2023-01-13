@@ -108,4 +108,27 @@ $contentHeigth: calc(100vh - 144px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .unscroll {
+    overflow: hidden;
+  }
+
+  .tabs {
+    margin-top: 36px;
+    display: flex;
+    gap: 32px;
+  }
+
+  .tab {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid $neutral-30;
+  }
+
+  .active {
+    color: $primary-50;
+    border-bottom: 2px solid $primary-50;
+  }
 }
