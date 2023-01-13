@@ -5,11 +5,13 @@ import cn from 'classnames';
 type TextAreaProps = {
   status?: string;
   disabled?: boolean;
+  placeholder?: string;
 };
 
 export function TextArea({
   status = 'default',
   disabled = false,
+  placeholder = '',
 }: TextAreaProps) {
   const classNames = cn(styles.textarea, {
     [styles.outline]: status === 'default',
@@ -21,7 +23,7 @@ export function TextArea({
   return (
     <textarea
       className={classNames}
-      placeholder="placeholder"
+      placeholder={placeholder}
       disabled={disabled}
     />
   );
