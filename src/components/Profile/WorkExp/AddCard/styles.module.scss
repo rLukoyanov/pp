@@ -23,6 +23,20 @@
   margin-top: 40px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    margin: 0;
+  }
+}
+
 .input {
   background-color: $white;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
