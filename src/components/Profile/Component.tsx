@@ -1,19 +1,31 @@
+import { useState } from 'react';
 import avatarPNG from '../../assets/avarar.png';
 import editSVG from '../../assets/Icon-edit.svg';
 
 import { Advantage } from '../common/Advantage';
 import { Contact } from './Contact';
+import { EditProfile } from './EditProfile';
 
 import styles from './styles.module.scss';
 
 export function Profile() {
+  const [isEditing, setIsEditing] = useState(false);
+  const openEdit = () => {
+    setIsEditing(true);
+  };
+
+  const closeEdit = () => {
+    setIsEditing(false);
+  };
+
   return (
     <div className={styles.profile}>
+      {isEditing && <EditProfile onClick={closeEdit} />}
       <div className={styles.left}>
         <img src={avatarPNG} />
         <h3>Мария Иванова</h3>
         <div className={styles.age}>20 лет</div>
-        <a>
+        <a onClick={openEdit}>
           <img src={editSVG} />
           <span>Редактировать профиль</span>
         </a>
