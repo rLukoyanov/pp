@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import { Advantage } from '../../../common/Advantage';
 
 import { Button } from '../../../common/Button';
 import { TextArea } from '../../../common/TextArea';
