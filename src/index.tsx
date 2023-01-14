@@ -11,6 +11,7 @@ import MainPage from './routes/MainPage';
 import VacanciesPage from './routes/VacanciesPage';
 import { OfferPage } from './routes/OfferPage';
 import ProfilePage from './routes/ProfilePage';
+import ResponsesPage from './routes/ResponsePage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -54,6 +55,14 @@ const router = createBrowserRouter([
     element: (
       <App>
         <ProfilePage />
+      </App>
+    ),
+  },
+  {
+    path: 'responses',
+    element: (
+      <App>
+        <ResponsesPage />
       </App>
     ),
   },
