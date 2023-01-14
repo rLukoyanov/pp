@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { Advantage } from '../../../common/Advantage';
 
 import { Button } from '../../../common/Button';
 import { TextArea } from '../../../common/TextArea';
@@ -22,7 +23,6 @@ export function AddAchieve({
             <img src={crossSVG} alt="close button" />
           </button>
         </div>
-
         <TextArea />
         <br />
         <Button className={cn(styles.upload)}>Загрузить фото</Button>
