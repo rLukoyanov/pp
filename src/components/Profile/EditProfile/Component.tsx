@@ -1,9 +1,13 @@
 import cn from 'classnames';
+import { useState } from 'react';
 
 import { Button } from '../../common/Button';
 import { Input } from '../../common/Input';
+import { Advandages } from './Advantages';
+import { Contacts } from './Contacts';
 
 import crossSVG from './cross.svg';
+import { MainInfo } from './MainInfo';
 
 import styles from './styles.module.scss';
 
@@ -12,6 +16,12 @@ export function EditProfile({
 }: {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
+  const [check, setCheck] = useState('radio-2');
+
+  const changeTab = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCheck(e.currentTarget.id);
+  };
+
   return (
     <div className={cn(styles.editProfile)}>
       <div className={cn(styles.content)}>
@@ -24,52 +34,26 @@ export function EditProfile({
         </div>
 
         <div className={cn(styles.tabs)}>
-          <input type="radio" name="tabs" id="radio-1" />
+          <input onChange={changeTab} type="radio" name="tabs" id="radio-1" />
           <label className={cn(styles.tab)} htmlFor="radio-1">
             Основная информация
           </label>
 
-          <input type="radio" name="tabs" id="radio-2" />
+          <input onChange={changeTab} type="radio" name="tabs" id="radio-2" />
           <label className={cn(styles.tab)} htmlFor="radio-2">
             Контактная информация
           </label>
 
-          <input type="radio" name="tabs" id="radio-3" />
+          <input onChange={changeTab} type="radio" name="tabs" id="radio-3" />
           <label className={cn(styles.tab)} htmlFor="radio-3">
             Редактирование навыков
           </label>
 
           <div className={cn(styles.glider)}></div>
         </div>
-
-        <label>
-          <h3>Имя</h3>
-          <Input classNames={cn(styles.input)} />
-        </label>
-        <label>
-          <h3>Фамилия</h3>
-          <Input classNames={cn(styles.input)} />
-        </label>
-        <label>
-          <h3>Дата рождения</h3>
-          <Input classNames={cn(styles.input)} />
-        </label>
-        <label>
-          <h3>Город</h3>
-          <Input classNames={cn(styles.input)} />
-        </label>
-        <label>
-          <h3>Учебное заведение</h3>
-          <Input classNames={cn(styles.input)} />
-        </label>
-        <label>
-          <h3>Изменить пароль</h3>
-          <Input classNames={cn(styles.input)} />
-        </label>
-        <label>
-          <h3>Изменить пароль</h3>
-          <Input classNames={cn(styles.input)} />
-        </label>
+        {check === 'radio-1' && <MainInfo />}
+        {check === 'radio-2' && <Contacts />}
+        {check === 'radio-3' && <Advandages />}
         <br />
         <Button className={cn(styles.done)}>Сохранить изменения</Button>
       </div>
