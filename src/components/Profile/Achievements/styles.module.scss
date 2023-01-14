@@ -1,0 +1,29 @@
+@import '../../../App';
+
+.achievements {
+  white-space: pre-line;
+  background-color: $white;
+  padding: 33px;
+  border-radius: 16px;
+  margin-top: 25px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 32px;
+    margin-left: 32px;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 32px;
+}

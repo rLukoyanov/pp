@@ -1,4 +1,4 @@
-@import "../../../App";
+@import '../../../App';
 
 .outline {
   transition: 1s;
@@ -10,7 +10,7 @@
 .textarea {
   outline: none;
   min-width: 392px;
-  width: 500px;
+  width: calc(100% - 32px);
   min-height: 88px;
   padding-top: 12px;
   padding-bottom: 12px;

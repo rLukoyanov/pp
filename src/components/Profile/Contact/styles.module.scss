@@ -1,0 +1,15 @@
+@import '../../../App';
+
+.contact {
+  h4 {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  div {
+    font-weight: 400;
+    font-size: 20px;
+    color: $primary-90;
+  }
+}
