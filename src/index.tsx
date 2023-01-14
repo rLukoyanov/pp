@@ -10,6 +10,7 @@ import './styles.scss';
 import MainPage from './routes/MainPage';
 import VacanciesPage from './routes/VacanciesPage';
 import { OfferPage } from './routes/OfferPage';
+import ProfilePage from './routes/ProfilePage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -45,6 +46,14 @@ const router = createBrowserRouter([
     element: (
       <App>
         <OfferPage />
+      </App>
+    ),
+  },
+  {
+    path: 'profile',
+    element: (
+      <App>
+        <ProfilePage />
       </App>
     ),
   },

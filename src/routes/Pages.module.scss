@@ -97,3 +97,37 @@ $contentHeigth: calc(100vh - 144px);
     padding-left: 32px;
   }
 }
+
+.profilePage {
+  position: relative;
+  height: $contentHeigth;
+  overflow-y: scroll;
+  padding: 32px 32px 0 32px;
+  width: 100%;
+
+  .unscroll {
+    overflow: hidden;
+  }
+
+  .tabs {
+    margin-top: 36px;
+    display: flex;
+    gap: 32px;
+  }
+
+  .tab {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid $neutral-30;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .active {
+    color: $primary-50;
+    border-bottom: 2px solid $primary-50;
+    transition: 0.5s;
+  }
+}
