@@ -9,7 +9,7 @@ export function Advantage({
   left = false,
   color = false,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   last?: boolean;
   top?: boolean;
   left?: boolean;
