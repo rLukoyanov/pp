@@ -8,7 +8,24 @@ import { EditProfile } from './EditProfile';
 
 import styles from './styles.module.scss';
 
-export function Profile() {
+type ProfileData = {
+  id?: number;
+  name?: string;
+  surName?: string;
+  contacts?: {
+    email?: string;
+    phoneNumber?: string;
+    city?: string;
+    university?: string;
+  };
+  advantages?: [];
+};
+
+type ProfileProps = {
+  profileData: ProfileData;
+};
+
+export function Profile({ profileData }: ProfileProps) {
   const [isEditing, setIsEditing] = useState(false);
   const openEdit = () => {
     setIsEditing(true);
@@ -23,7 +40,9 @@ export function Profile() {
       {isEditing && <EditProfile onClick={closeEdit} />}
       <div className={styles.left}>
         <img src={avatarPNG} />
-        <h3>Мария Иванова</h3>
+        <h3>
+          {profileData.name} {profileData.surName}
+        </h3>
         <div className={styles.age}>20 лет</div>
         <a onClick={openEdit}>
           <img src={editSVG} />
@@ -31,9 +50,9 @@ export function Profile() {
         </a>
       </div>
       <div className={styles.contacts}>
-        <Contact title="E-mail" text="example343@gmail.com" />
-        <Contact title="Телефон" text="+7 908 088 88 77" />
-        <Contact title="Город" text="Екатеринбург" />
+        <Contact title="E-mail" text={profileData.contacts?.email} />
+        <Contact title="Телефон" text={profileData.contacts?.phoneNumber} />
+        <Contact title="Город" text={profileData.contacts?.city} />
         <Contact
           title="Учебное заведение"
           text="Уральский федеральный университет"
@@ -42,19 +61,11 @@ export function Profile() {
       <div className={styles.advantages}>
         <h3>Навыки</h3>
         <ul>
-          <Advantage color>Figma</Advantage>
-          <Advantage color left>
-            Illustrator
-          </Advantage>
-          <Advantage color top>
-            Product design
-          </Advantage>
-          <Advantage color top>
-            Workflow
-          </Advantage>
-          <Advantage color left top>
-            ux/ui
-          </Advantage>
+          {profileData.advantages?.map((item) => (
+            <Advantage color top left>
+              {item}
+            </Advantage>
+          ))}
         </ul>
       </div>
     </div>

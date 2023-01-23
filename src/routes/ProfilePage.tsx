@@ -1,5 +1,6 @@
 import cn from 'classnames';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getProfile } from '../api/apiHelper';
 import { Profile } from '../components/Profile';
 import { Achievements } from '../components/Profile/Achievements';
 import { WorkExp } from '../components/Profile/WorkExp';
@@ -7,9 +8,16 @@ import styles from './Pages.module.scss';
 
 export default function ProfilePage() {
   const [active, setActive] = useState(1);
+  const [profileData, setProfileData] = useState({});
+  useEffect(() => {
+    async function fetchData() {
+      setProfileData(await getProfile());
+    }
+    void fetchData();
+  }, []);
   return (
     <div className={styles.profilePage}>
-      <Profile />
+      <Profile profileData={profileData} />
       <div className={styles.tabs}>
         <div
           onClick={() => setActive(1)}

@@ -1,8 +1,8 @@
 import styles from './styles.module.scss';
 
 type ContactProps = {
-  title: string;
-  text: string;
+  title: string | undefined;
+  text: string | undefined;
 };
 
 export function Contact({ title, text }: ContactProps) {
