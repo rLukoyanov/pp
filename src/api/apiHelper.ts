@@ -36,4 +36,28 @@ async function getProfile() {
   }
 }
 
-export { getProfile };
+export type CompanyRatingResponse = {
+  pos: number;
+  name: string;
+  industry: string;
+  studentsCount: number;
+};
+
+async function getCompanyRating() {
+  try {
+    const { data } = await axios.get<CompanyRatingResponse>(
+      'http://localhost:4000/rating',
+      {
+        headers: {
+          Accept: 'application/json',
+        },
+      },
+    );
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export { getProfile, getCompanyRating };

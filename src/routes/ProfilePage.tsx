@@ -9,12 +9,14 @@ import styles from './Pages.module.scss';
 export default function ProfilePage() {
   const [active, setActive] = useState(1);
   const [profileData, setProfileData] = useState({});
+
   useEffect(() => {
     async function fetchData() {
       setProfileData(await getProfile());
     }
     void fetchData();
   }, []);
+  
   return (
     <div className={styles.profilePage}>
       <Profile profileData={profileData} />
