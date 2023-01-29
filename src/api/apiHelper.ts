@@ -1,6 +1,6 @@
 import axios, { isAxiosError } from 'axios';
 
-type ProfileResponse = {
+export type ProfileResponse = {
   id: number;
   name: string;
   surName: string;
@@ -60,4 +60,29 @@ async function getCompanyRating() {
   }
 }
 
-export { getProfile, getCompanyRating };
+export type ResponsesResponse = {
+  id: number;
+  title: string;
+  companyName: string;
+  city: string;
+  status: string;
+};
+
+async function getResponses() {
+  try {
+    const { data } = await axios.get<ResponsesResponse>(
+      'http://localhost:4000/responses',
+      {
+        headers: {
+          Accept: 'application/json',
+        },
+      },
+    );
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export { getProfile, getCompanyRating, getResponses };

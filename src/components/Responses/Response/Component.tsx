@@ -7,17 +7,27 @@ import styles from './styles.module.scss';
 
 type ResponseProps = {
   status: string;
-  statusText: string;
 };
 
-export function Response({
-  status = 'waiting',
-  statusText = 'Просмотрен',
-}: ResponseProps) {
+export function Response({ status = 'unviwed' }: ResponseProps) {
+  let statusText = '';
+
+  switch (status) {
+    case 'unviwed':
+      statusText = 'Не просмотрено';
+      break;
+    case 'invite':
+      statusText = 'Приглашение';
+      break;
+    case 'viwed':
+      statusText = 'Просмотрено';
+      break;
+  }
+
   const classNames = cn(styles.status, {
     [styles.invite]: status === 'invite',
-    [styles.waiting]: status === 'waiting',
-    [styles.checked]: status === 'checked',
+    [styles.waiting]: status === 'unviwed',
+    [styles.checked]: status === 'viwed',
   });
 
   return (
